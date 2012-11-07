@@ -1,4 +1,4 @@
-Japanese Traditional Colors
+#Japanese Traditional Colors
 
 ##JPColor Class
 This class is an Objective-C category extended UIColor Class.
@@ -14,7 +14,7 @@ You'll need to add the __JPColor__ Class to your Xcode project and import header
 
 	#import "UIColor+JPColor.h"
 
-　
+
 <***.m>
 
 	UIColor* color = [UIColor `Method Name`];
