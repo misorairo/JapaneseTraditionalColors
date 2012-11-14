@@ -10,7 +10,5 @@
 #import "UIColor+JPColor.h"
 
 @interface MainViewController : UIViewController
-{
-       UIView* _colorView[16];
-}
+
 @end

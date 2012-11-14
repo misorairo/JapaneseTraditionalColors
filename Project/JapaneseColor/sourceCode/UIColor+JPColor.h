@@ -2,7 +2,7 @@
 //  UIColor+JPColor.h
 //  Traditional_Color_Of_Japan
 //
-//  Created by Izumi Uchino on 12/11/06.
+//  Created by Izumi Uchino on 12/11/14.
 //  Copyright (c) 2012 Izumi Uchino. All rights reserved.
 //
 
@@ -11,8 +11,13 @@
 @interface UIColor (JPColor)
 
 /**
- * Methods for creating traditional colors of Japan. 
+ * Methods for creating the traditional colors of Japan.
  */
+
+/* This method returns a traditional color of Japan (UIColor) corresponding to the color's index. */
++ (UIColor *) jpColorAtIndex:(NSInteger)colorIndex;
+
+/* These methods create a new UIColor instance. */
 +(UIColor*) ayameiro;				// 菖蒲色 [あやめいろ] RGB=(169,66,130)
 +(UIColor*) botanniro;				// 牡丹色 [ぼたんいろ] RGB=(208,66,132)
 +(UIColor*) tsutsujiiro;			// 躑躅色 [つつじいろ] RGB=(214,59,125)

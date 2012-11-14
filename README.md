@@ -10,30 +10,43 @@ This class is an Objective-C category extended UIColor Class.
 ###Usage
 You'll need to add the __JPColor__ Class to your Xcode project and import header file.
 
-<***.h>
 
 	#import "UIColor+JPColor.h"
 
 
-<***.m>
+### Call Method
+	UIColor* color = [UIColor 'color name'];                 // Only Method Name
+	UIColor* color = [UIColor jpColorAtIndex:'color index']; // Use an Argument (NSInteger)
 
-	UIColor* color = [UIColor `Method Name`];
-####Method name / Color chart
-When you search __Color chart__ or __Method name__, please consult "ColorChart_JPColor.pdf".
-　
-#### Example
+
+### Example
+
+Using __color name__ of Japanes traditional color
+
     UIColor* sakura    = [UIColor sakurairo];    
-    UIColor* uguisu    = [UIColor uguisuiro];  
+    UIColor* uguisu    = [UIColor uguisuiro];
     UIColor* yamabuki  = [UIColor yamabukiiro];
-    UIColor* tsuyukusa = [UIColor tsuyukusairo]; 
+    UIColor* tsuyukusa = [UIColor tsuyukusairo];
 
-![](https://raw.github.com/misorairo/JapaneseTraditionalColors/master/sampleColor.png)
 
-###Support
+Using __color index__
+
+    UIColor* sakura    = [UIColor jpColorAtIndex:18];  
+    UIColor* uguisu    = [UIColor jpColorAtIndex:166]; 
+    UIColor* yamabuki  = [UIColor jpColorAtIndex:115];  
+    UIColor* tsuyukusa = [UIColor jpColorAtIndex:220]; 
+
+![](https://raw.github.com/misorairo/JapaneseTraditionalColors/master/sampleColor.png) 
+
+
+### Color Chart
+When you search __Method name__ or __Color index__, please consult "ColorChart_JPColor.pdf".
+
+##Support
 Available: iOS 5.0+
 
 __JPColor__ is tested on iOS 5.0 and later.
-(But some older versions may work..) 
+(But some older versions may work...) 
 
 
 ##Books for reference

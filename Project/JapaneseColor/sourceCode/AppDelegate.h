@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MainViewController.h"
+#import "NextViewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
-    MainViewController*         _mainVC;
     UINavigationController*     _navi;
+    MainViewController*         _mainViewcon;
+    NextViewController*         _nextViewcon;
 }
 
 @property (strong, nonatomic) UIWindow *window;

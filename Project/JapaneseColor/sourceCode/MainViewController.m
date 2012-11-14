@@ -7,7 +7,7 @@
 //
 
 #import "MainViewController.h"
-
+#import "AppDelegate.h"
 @interface MainViewController ()
 
 @end
@@ -26,12 +26,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
+	
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"Example";
+    self.title = @"Example 1";
     self.navigationController.navigationBar.tintColor = [UIColor azukiiro];
     
+    // Create rightBarButtonItem
+    AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+	UIBarButtonItem *btnNext = [[UIBarButtonItem alloc]
+                                initWithTitle:@"Next"
+                                style:UIBarButtonItemStyleBordered
+                                target:appDelegate
+                                action:@selector(pushedNextButton:)];
+    self.navigationItem.rightBarButtonItem = btnNext;
+    
+    // Create Color View
+    UIView* colorView[16];
     int size = 64;
     for (int i = 0; i < 16; i++) {
         int px = i % 4;
@@ -39,41 +49,38 @@
         int x = 8 * (px/4+1) + (size+16) * px;  // 表示位置：横
         int y = 16            + (size+48) * py;  // 表示位置：縦
 
-        _colorView[i] = [[UIView alloc]initWithFrame:CGRectMake(x, y, size, size)];
-        [self.view addSubview:_colorView[i]];
+        colorView[i] = [[UIView alloc]initWithFrame:CGRectMake(x, y, size, size)];
+        [self.view addSubview:colorView[i]];
     }
     
-    _colorView[0].backgroundColor  = [UIColor sakurairo];
-    _colorView[1].backgroundColor  = [UIColor sekichikuiro];
-    _colorView[2].backgroundColor  = [UIColor koubaiiro];
-    _colorView[3].backgroundColor  = [UIColor akaneiro];
     
-    _colorView[4].backgroundColor  = [UIColor wasabiiro];
-    _colorView[5].backgroundColor  = [UIColor naeiro];
-    _colorView[6].backgroundColor  = [UIColor hiwamoegi];
-    _colorView[7].backgroundColor  = [UIColor uguisuiro];
+    //////////////////////////////////////////////////////////////////
+    // Example 1 : Japanese Traditional Colors
+    //////////////////////////////////////////////////////////////////
+    colorView[0].backgroundColor  = [UIColor sakurairo];
+    colorView[1].backgroundColor  = [UIColor sekichikuiro];
+    colorView[2].backgroundColor  = [UIColor koubaiiro];
+    colorView[3].backgroundColor  = [UIColor akaneiro];
     
-    _colorView[8].backgroundColor  = [UIColor kihada];
-    _colorView[9].backgroundColor  = [UIColor kiiro];
-    _colorView[10].backgroundColor = [UIColor yamabukiiro];
-    _colorView[11].backgroundColor = [UIColor mikanniro];
+    colorView[4].backgroundColor  = [UIColor wasabiiro];
+    colorView[5].backgroundColor  = [UIColor naeiro];
+    colorView[6].backgroundColor  = [UIColor hiwamoegi];
+    colorView[7].backgroundColor  = [UIColor uguisuiro];
     
-    _colorView[12].backgroundColor = [UIColor sorairo];
-    _colorView[13].backgroundColor = [UIColor usuhanairo];
-    _colorView[14].backgroundColor = [UIColor tsuyukusairo];
-    _colorView[15].backgroundColor = [UIColor gunnjouiro];
-
-
+    colorView[8].backgroundColor  = [UIColor kihada];
+    colorView[9].backgroundColor  = [UIColor kiiro];
+    colorView[10].backgroundColor = [UIColor yamabukiiro];
+    colorView[11].backgroundColor = [UIColor mikanniro];
+    
+    colorView[12].backgroundColor = [UIColor sorairo];
+    colorView[13].backgroundColor = [UIColor usuhanairo];
+    colorView[14].backgroundColor = [UIColor tsuyukusairo];
+    colorView[15].backgroundColor = [UIColor gunnjouiro];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-    
-    for(int i = 0; i < 16; i++) {
-        [_colorView[i] removeFromSuperview];
-    }
 }
 
 @end

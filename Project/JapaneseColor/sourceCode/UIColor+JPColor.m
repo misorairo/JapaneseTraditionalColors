@@ -2,7 +2,7 @@
 //  UIColor+JPColor.m
 //  Traditional_Color_Of_Japan
 //
-//  Created by Izumi Uchino on 12/11/06.
+//  Created by Izumi Uchino on 12/11/14.
 //  Copyright (c) 2012 Izumi Uchino. All rights reserved.
 //
 
@@ -11,7 +11,335 @@
 @implementation UIColor (JPColor)
 
 /**
- * Methods for creating traditional colors of Japan.
+ * Method for creating the traditional color of Japan.
+ * This method returns a UIColor corresponding to the color's index.
+ */
++ (UIColor *) jpColorAtIndex:(NSInteger)colorIndex
+{
+    int i = colorIndex;
+    
+    // Call the JPColor method corresponding to a specified index.
+    if (i == 1) { return [UIColor ayameiro]; }
+    if (i == 2) { return [UIColor botanniro]; }
+    if (i == 3) { return [UIColor tsutsujiiro]; }
+    if (i == 4) { return [UIColor nadeshikoiro]; }
+    if (i == 5) { return [UIColor sekichikuiro]; }
+    if (i == 6) { return [UIColor koubaiiro]; }
+    if (i == 7) { return [UIColor karakurenai]; }
+    if (i == 8) { return [UIColor ennji]; }
+    if (i == 9) { return [UIColor imayouiro]; }
+    if (i == 10) { return [UIColor usubeni]; }
+    if (i == 11) { return [UIColor momoiro]; }
+    if (i == 12) { return [UIColor ikkonnzome]; }
+    if (i == 13) { return [UIColor asakisuou]; }
+    if (i == 14) { return [UIColor nisemomoiro]; }
+    if (i == 15) { return [UIColor taikou]; }
+    if (i == 16) { return [UIColor shiraumeiro]; }
+    if (i == 17) { return [UIColor usuzakura]; }
+    if (i == 18) { return [UIColor sakurairo]; }
+    if (i == 19) { return [UIColor haizakura]; }
+    if (i == 20) { return [UIColor sakuranezu]; }
+    if (i == 21) { return [UIColor umenezu]; }
+    if (i == 22) { return [UIColor azukinezu]; }
+    if (i == 23) { return [UIColor benihiwada]; }
+    if (i == 24) { return [UIColor murasakitobi]; }
+    if (i == 25) { return [UIColor kuwanomiiro]; }
+    if (i == 26) { return [UIColor fukakisuou]; }
+    if (i == 27) { return [UIColor azukicha]; }
+    if (i == 28) { return [UIColor beniebicha]; }
+    if (i == 29) { return [UIColor azukiiro]; }
+    if (i == 30) { return [UIColor benitobi]; }
+    if (i == 31) { return [UIColor suou]; }
+    if (i == 32) { return [UIColor akaneiro]; }
+    if (i == 33) { return [UIColor kurenai]; }
+    if (i == 34) { return [UIColor aka]; }
+    if (i == 35) { return [UIColor shoujouhi]; }
+    if (i == 36) { return [UIColor omoiiro]; }
+    if (i == 37) { return [UIColor masoho]; }
+    if (i == 38) { return [UIColor kyouhiiro]; }
+    if (i == 39) { return [UIColor ginnshu]; }
+    if (i == 40) { return [UIColor hiiro]; }
+    if (i == 41) { return [UIColor benihi]; }
+    if (i == 42) { return [UIColor benikabairo]; }
+    if (i == 43) { return [UIColor benngarairo]; }
+    if (i == 44) { return [UIColor akasuou]; }
+    if (i == 45) { return [UIColor sohoni]; }
+    if (i == 46) { return [UIColor nisebeni]; }
+    if (i == 47) { return [UIColor jinnzamomi]; }
+    if (i == 48) { return [UIColor shinonomeiro]; }
+    if (i == 49) { return [UIColor araishu]; }
+    if (i == 50) { return [UIColor tokiiro]; }
+    if (i == 51) { return [UIColor sanngoiro]; }
+    if (i == 52) { return [UIColor tokiasagi]; }
+    if (i == 53) { return [UIColor otomeiro]; }
+    if (i == 54) { return [UIColor akebonoiro]; }
+    if (i == 55) { return [UIColor sohi]; }
+    if (i == 56) { return [UIColor kabazakura]; }
+    if (i == 57) { return [UIColor enntanniro]; }
+    if (i == 58) { return [UIColor shuiro]; }
+    if (i == 59) { return [UIColor beniukonn]; }
+    if (i == 60) { return [UIColor akani]; }
+    if (i == 61) { return [UIColor akaganeiro]; }
+    if (i == 62) { return [UIColor niiro]; }
+    if (i == 63) { return [UIColor terigaki]; }
+    if (i == 64) { return [UIColor dannjuuroucha]; }
+    if (i == 65) { return [UIColor akasabiiro]; }
+    if (i == 66) { return [UIColor kabairo]; }
+    if (i == 67) { return [UIColor shibugamiiro]; }
+    if (i == 68) { return [UIColor kabacha]; }
+    if (i == 69) { return [UIColor sabiiro]; }
+    if (i == 70) { return [UIColor kuriume]; }
+    if (i == 71) { return [UIColor suoukou]; }
+    if (i == 72) { return [UIColor edocha]; }
+    if (i == 73) { return [UIColor shikanncha]; }
+    if (i == 74) { return [UIColor akashirotsurubami]; }
+    if (i == 75) { return [UIColor tobiiro]; }
+    if (i == 76) { return [UIColor kurikawacha]; }
+    if (i == 77) { return [UIColor ebicha]; }
+    if (i == 78) { return [UIColor kuriiro]; }
+    if (i == 79) { return [UIColor kasshoku]; }
+    if (i == 80) { return [UIColor hiwadairo]; }
+    if (i == 81) { return [UIColor kogareiro]; }
+    if (i == 82) { return [UIColor kurotobi]; }
+    if (i == 83) { return [UIColor kakishibuiro]; }
+    if (i == 84) { return [UIColor karacha]; }
+    if (i == 85) { return [UIColor mizugaki]; }
+    if (i == 86) { return [UIColor shudonamakabe]; }
+    if (i == 87) { return [UIColor kawarakeiro]; }
+    if (i == 88) { return [UIColor tokigaracha]; }
+    if (i == 89) { return [UIColor kakiiro]; }
+    if (i == 90) { return [UIColor ouni]; }
+    if (i == 91) { return [UIColor daidaiiro]; }
+    if (i == 92) { return [UIColor mikanniro]; }
+    if (i == 93) { return [UIColor akakuchinashi]; }
+    if (i == 94) { return [UIColor araigaki]; }
+    if (i == 95) { return [UIColor annzuiro]; }
+    if (i == 96) { return [UIColor sharegaki]; }
+    if (i == 97) { return [UIColor hadairo]; }
+    if (i == 98) { return [UIColor fukakikuchinashi]; }
+    if (i == 99) { return [UIColor akakuchiba]; }
+    if (i == 100) { return [UIColor umezome]; }
+    if (i == 101) { return [UIColor kohakuiro]; }
+    if (i == 102) { return [UIColor kourozenn]; }
+    if (i == 103) { return [UIColor taisha]; }
+    if (i == 104) { return [UIColor tonocha]; }
+    if (i == 105) { return [UIColor tsuchiiro]; }
+    if (i == 106) { return [UIColor choujiiro]; }
+    if (i == 107) { return [UIColor kurumiiro]; }
+    if (i == 108) { return [UIColor kouiro]; }
+    if (i == 109) { return [UIColor shirotsurubami]; }
+    if (i == 110) { return [UIColor usukou]; }
+    if (i == 111) { return [UIColor kurumizome]; }
+    if (i == 112) { return [UIColor kuchibairo]; }
+    if (i == 113) { return [UIColor yuuou]; }
+    if (i == 114) { return [UIColor koujiiro]; }
+    if (i == 115) { return [UIColor yamabukiiro]; }
+    if (i == 116) { return [UIColor koganeiro]; }
+    if (i == 117) { return [UIColor oudoiro]; }
+    if (i == 118) { return [UIColor kigaracha]; }
+    if (i == 119) { return [UIColor kuwacha]; }
+    if (i == 120) { return [UIColor komugiiro]; }
+    if (i == 121) { return [UIColor kikuchiba]; }
+    if (i == 122) { return [UIColor torinokoiro]; }
+    if (i == 123) { return [UIColor usutamagoiro]; }
+    if (i == 124) { return [UIColor usukouji]; }
+    if (i == 125) { return [UIColor tamagoiro]; }
+    if (i == 126) { return [UIColor kuchinashi]; }
+    if (i == 127) { return [UIColor kariyasuiro]; }
+    if (i == 128) { return [UIColor kihada]; }
+    if (i == 129) { return [UIColor nanohanairo]; }
+    if (i == 130) { return [UIColor kiiro]; }
+    if (i == 131) { return [UIColor tannpopoiro]; }
+    if (i == 132) { return [UIColor ukonniro]; }
+    if (i == 133) { return [UIColor kikuchinashi]; }
+    if (i == 134) { return [UIColor himawariiro]; }
+    if (i == 135) { return [UIColor karashiiro]; }
+    if (i == 136) { return [UIColor hajiiro]; }
+    if (i == 137) { return [UIColor kitsurubami]; }
+    if (i == 138) { return [UIColor aitamago]; }
+    if (i == 139) { return [UIColor ominaeshi]; }
+    if (i == 140) { return [UIColor mushiguriiro]; }
+    if (i == 141) { return [UIColor rikyuushiracha]; }
+    if (i == 142) { return [UIColor tamagonezu]; }
+    if (i == 143) { return [UIColor baikoucha]; }
+    if (i == 144) { return [UIColor rokoucha]; }
+    if (i == 145) { return [UIColor sennzaicha]; }
+    if (i == 146) { return [UIColor hiwacha]; }
+    if (i == 147) { return [UIColor uguisucha]; }
+    if (i == 148) { return [UIColor rikyuucha]; }
+    if (i == 149) { return [UIColor mirucha]; }
+    if (i == 150) { return [UIColor rikyuunezu]; }
+    if (i == 151) { return [UIColor macchairo]; }
+    if (i == 152) { return [UIColor wakameiro]; }
+    if (i == 153) { return [UIColor hiwairo]; }
+    if (i == 154) { return [UIColor wakanaeiro]; }
+    if (i == 155) { return [UIColor wakanairo]; }
+    if (i == 156) { return [UIColor wakakusairo]; }
+    if (i == 157) { return [UIColor hiwamoegi]; }
+    if (i == 158) { return [UIColor kimidori]; }
+    if (i == 159) { return [UIColor moegi]; }
+    if (i == 160) { return [UIColor wakabairo]; }
+    if (i == 161) { return [UIColor wasabiiro]; }
+    if (i == 162) { return [UIColor wakamidori]; }
+    if (i == 163) { return [UIColor naeiro]; }
+    if (i == 164) { return [UIColor usumoegi]; }
+    if (i == 165) { return [UIColor yanagiiro]; }
+    if (i == 166) { return [UIColor uguisuiro]; }
+    if (i == 167) { return [UIColor aokuchiba]; }
+    if (i == 168) { return [UIColor nataneyuiro]; }
+    if (i == 169) { return [UIColor kimirucha]; }
+    if (i == 170) { return [UIColor kobicha]; }
+    if (i == 171) { return [UIColor rikanncha]; }
+    if (i == 172) { return [UIColor rikyuunamakabe]; }
+    if (i == 173) { return [UIColor negishiiro]; }
+    if (i == 174) { return [UIColor kikujinn]; }
+    if (i == 175) { return [UIColor yanagisusutake]; }
+    if (i == 176) { return [UIColor miruiro]; }
+    if (i == 177) { return [UIColor aoshirotsurubami]; }
+    if (i == 178) { return [UIColor aimirucha]; }
+    if (i == 179) { return [UIColor aoni]; }
+    if (i == 180) { return [UIColor seishitsu]; }
+    if (i == 181) { return [UIColor kusairo]; }
+    if (i == 182) { return [UIColor kokeiro]; }
+    if (i == 183) { return [UIColor matsubairo]; }
+    if (i == 184) { return [UIColor tokiwairo]; }
+    if (i == 185) { return [UIColor chitosemidori]; }
+    if (i == 186) { return [UIColor sasabeniiro]; }
+    if (i == 187) { return [UIColor oitakeiro]; }
+    if (i == 188) { return [UIColor chigusanezu]; }
+    if (i == 189) { return [UIColor urayanagi]; }
+    if (i == 190) { return [UIColor byakuroku]; }
+    if (i == 191) { return [UIColor wakatakeiro]; }
+    if (i == 192) { return [UIColor hanamoegi]; }
+    if (i == 193) { return [UIColor aomidori]; }
+    if (i == 194) { return [UIColor midori]; }
+    if (i == 195) { return [UIColor tamamushiiro]; }
+    if (i == 196) { return [UIColor tetsuiro]; }
+    if (i == 197) { return [UIColor tokusairo]; }
+    if (i == 198) { return [UIColor moegiiro]; }
+    if (i == 199) { return [UIColor rokushouiro]; }
+    if (i == 200) { return [UIColor aotakeiro]; }
+    if (i == 201) { return [UIColor chigusairo]; }
+    if (i == 202) { return [UIColor seijiiro]; }
+    if (i == 203) { return [UIColor sabiseiji]; }
+    if (i == 204) { return [UIColor nanndonezu]; }
+    if (i == 205) { return [UIColor omeshionanndo]; }
+    if (i == 206) { return [UIColor sabinanndo]; }
+    if (i == 207) { return [UIColor omeshicha]; }
+    if (i == 208) { return [UIColor tetsukonn]; }
+    if (i == 209) { return [UIColor nanndoiro]; }
+    if (i == 210) { return [UIColor sabiasagi]; }
+    if (i == 211) { return [UIColor hisoku]; }
+    if (i == 212) { return [UIColor byakugunn]; }
+    if (i == 213) { return [UIColor mizuasagi]; }
+    if (i == 214) { return [UIColor asagiiro]; }
+    if (i == 215) { return [UIColor hanaasagi]; }
+    if (i == 216) { return [UIColor shinnbashiiro]; }
+    if (i == 217) { return [UIColor mizuiro]; }
+    if (i == 218) { return [UIColor mihanada]; }
+    if (i == 219) { return [UIColor asakihanada]; }
+    if (i == 220) { return [UIColor tsuyukusairo]; }
+    if (i == 221) { return [UIColor tennshoku]; }
+    if (i == 222) { return [UIColor ao]; }
+    if (i == 223) { return [UIColor hanadairo]; }
+    if (i == 224) { return [UIColor ai]; }
+    if (i == 225) { return [UIColor konnai]; }
+    if (i == 226) { return [UIColor fukakihanada]; }
+    if (i == 227) { return [UIColor rurikonn]; }
+    if (i == 228) { return [UIColor konnjou]; }
+    if (i == 229) { return [UIColor ruriiro]; }
+    if (i == 230) { return [UIColor gunnjouiro]; }
+    if (i == 231) { return [UIColor utsushiiro]; }
+    if (i == 232) { return [UIColor usuhanairo]; }
+    if (i == 233) { return [UIColor wasurenagusairo]; }
+    if (i == 234) { return [UIColor sorairo]; }
+    if (i == 235) { return [UIColor kamenozoki]; }
+    if (i == 236) { return [UIColor shiraai]; }
+    if (i == 237) { return [UIColor geppaku]; }
+    if (i == 238) { return [UIColor soraironezu]; }
+    if (i == 239) { return [UIColor usuai]; }
+    if (i == 240) { return [UIColor edonanndo]; }
+    if (i == 241) { return [UIColor konniro]; }
+    if (i == 242) { return [UIColor koiai]; }
+    if (i == 243) { return [UIColor kachiiro]; }
+    if (i == 244) { return [UIColor aizumi]; }
+    if (i == 245) { return [UIColor ainezu]; }
+    if (i == 246) { return [UIColor ainamakabe]; }
+    if (i == 247) { return [UIColor namariiro]; }
+    if (i == 248) { return [UIColor kasumiiro]; }
+    if (i == 249) { return [UIColor nisefuji]; }
+    if (i == 250) { return [UIColor fujinanndo]; }
+    if (i == 251) { return [UIColor futaai]; }
+    if (i == 252) { return [UIColor kikyouiro]; }
+    if (i == 253) { return [UIColor kakitsubatairo]; }
+    if (i == 254) { return [UIColor edomurasaki]; }
+    if (i == 255) { return [UIColor rinndouiro]; }
+    if (i == 256) { return [UIColor fujiiro]; }
+    if (i == 257) { return [UIColor shikonn]; }
+    if (i == 258) { return [UIColor shikokushoku]; }
+    if (i == 259) { return [UIColor murasaki]; }
+    if (i == 260) { return [UIColor shoubuiro]; }
+    if (i == 261) { return [UIColor imamurasaki]; }
+    if (i == 262) { return [UIColor sumireiro]; }
+    if (i == 263) { return [UIColor fujimurasaki]; }
+    if (i == 264) { return [UIColor shionn]; }
+    if (i == 265) { return [UIColor ouchiiro]; }
+    if (i == 266) { return [UIColor usuiro]; }
+    if (i == 267) { return [UIColor hashitairo]; }
+    if (i == 268) { return [UIColor kodaimurasaki]; }
+    if (i == 269) { return [UIColor kyoumurasaki]; }
+    if (i == 270) { return [UIColor nisemurasaki]; }
+    if (i == 271) { return [UIColor ebizome]; }
+    if (i == 272) { return [UIColor nasukonn]; }
+    if (i == 273) { return [UIColor kokiiro]; }
+    if (i == 274) { return [UIColor messhi]; }
+    if (i == 275) { return [UIColor ebinezu]; }
+    if (i == 276) { return [UIColor fujinamakabe]; }
+    if (i == 277) { return [UIColor hatobairo]; }
+    if (i == 278) { return [UIColor chanezu]; }
+    if (i == 279) { return [UIColor namakabeiro]; }
+    if (i == 280) { return [UIColor utsubushiiro]; }
+    if (i == 281) { return [UIColor sabirikyuu]; }
+    if (i == 282) { return [UIColor sennchairo]; }
+    if (i == 283) { return [UIColor susutakeiro]; }
+    if (i == 284) { return [UIColor youkanniro]; }
+    if (i == 285) { return [UIColor roiro]; }
+    if (i == 286) { return [UIColor kogecha]; }
+    if (i == 287) { return [UIColor kennpouzome]; }
+    if (i == 288) { return [UIColor kurokoubai]; }
+    if (i == 289) { return [UIColor shiro]; }
+    if (i == 290) { return [UIColor nyuuhakushoku]; }
+    if (i == 291) { return [UIColor unohanairo]; }
+    if (i == 292) { return [UIColor gofunniro]; }
+    if (i == 293) { return [UIColor shironeri]; }
+    if (i == 294) { return [UIColor neriiro]; }
+    if (i == 295) { return [UIColor tonokoiro]; }
+    if (i == 296) { return [UIColor kinariiro]; }
+    if (i == 297) { return [UIColor shiraumenezu]; }
+    if (i == 298) { return [UIColor shiroganeiro]; }
+    if (i == 299) { return [UIColor usuzumiiro]; }
+    if (i == 300) { return [UIColor ginnnezu]; }
+    if (i == 301) { return [UIColor haiiro]; }
+    if (i == 302) { return [UIColor keshizumiiro]; }
+    if (i == 303) { return [UIColor nibiiro]; }
+    if (i == 304) { return [UIColor fujisusutake]; }
+    if (i == 305) { return [UIColor sumi]; }
+    if (i == 306) { return [UIColor kurotsurubami]; }
+    if (i == 307) { return [UIColor aizumicha]; }
+    if (i == 308) { return [UIColor binnroujiguro]; }
+    if (i == 309) { return [UIColor shikkoku]; }
+    if (i == 310) { return [UIColor kuro]; }
+    
+    else
+    {
+        NSLog(@"no %d : This color index is not operational", i);
+    }
+    return [UIColor clearColor];
+}
+
+/**
+ * [JPColor methods]
+ * Methods for creating the traditional colors of Japan.
  * These methods create a new UIColor instance.
  *
  * current number of colors: 310

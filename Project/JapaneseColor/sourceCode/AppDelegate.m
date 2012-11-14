@@ -16,14 +16,25 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor clearColor];
     
-    // viewcon
-    _mainVC = [[MainViewController alloc] initWithNibName:nil bundle:nil];
-    _navi  = [[UINavigationController alloc] initWithRootViewController:_mainVC];
-    [self.window addSubview:_navi.view];
+    // ViewController
+    _mainViewcon = [[MainViewController alloc] initWithNibName:nil bundle:nil];
+    _nextViewcon = [[NextViewController alloc] initWithNibName:nil bundle:nil];
+    _navi  = [[UINavigationController alloc] initWithRootViewController:_mainViewcon];
+    self.window.rootViewController = _navi;
     
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+-(void) pushedNextButton:(id)sender {
+
+    [_navi pushViewController:_nextViewcon animated:YES];
+}
+
+-(void) pushedBackButton:(id)sender {
+    [_navi popViewControllerAnimated:YES];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

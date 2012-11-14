@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD6306B716528A6100BBA986 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6306B616528A6100BBA986 /* NextViewController.m */; };
 		FD7D66081649CB6F009F0BD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7D66071649CB6F009F0BD9 /* UIKit.framework */; };
 		FD7D660A1649CB6F009F0BD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7D66091649CB6F009F0BD9 /* Foundation.framework */; };
 		FD7D660C1649CB6F009F0BD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7D660B1649CB6F009F0BD9 /* CoreGraphics.framework */; };
@@ -14,7 +15,6 @@
 		FD7D66311649CCC5009F0BD9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FD7D66281649CCC5009F0BD9 /* Default.png */; };
 		FD7D66321649CCC5009F0BD9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD7D66291649CCC5009F0BD9 /* Default@2x.png */; };
 		FD7D66331649CCC5009F0BD9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD7D662B1649CCC5009F0BD9 /* InfoPlist.strings */; };
-		FD7D66341649CCC5009F0BD9 /* JapaneseColor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD7D662D1649CCC5009F0BD9 /* JapaneseColor-Info.plist */; };
 		FD7D66351649CCC5009F0BD9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7D662F1649CCC5009F0BD9 /* main.m */; };
 		FD7D66381649CD53009F0BD9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7D66371649CD53009F0BD9 /* AppDelegate.m */; };
 		FD7D663B1649CD68009F0BD9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7D663A1649CD68009F0BD9 /* MainViewController.m */; };
@@ -22,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD6306B516528A6100BBA986 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NextViewController.h; path = sourceCode/NextViewController.h; sourceTree = "<group>"; };
+		FD6306B616528A6100BBA986 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NextViewController.m; path = sourceCode/NextViewController.m; sourceTree = "<group>"; };
 		FD7D66031649CB6F009F0BD9 /* JapaneseColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7D66071649CB6F009F0BD9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FD7D66091649CB6F009F0BD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,6 +57,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD3399221653589E00A05FF3 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				FD7D66391649CD68009F0BD9 /* MainViewController.h */,
+				FD7D663A1649CD68009F0BD9 /* MainViewController.m */,
+				FD6306B516528A6100BBA986 /* NextViewController.h */,
+				FD6306B616528A6100BBA986 /* NextViewController.m */,
+			);
+			name = Example;
+			sourceTree = "<group>";
+		};
+		FD339924165358D300A05FF3 /* JPColor */ = {
+			isa = PBXGroup;
+			children = (
+				FD7D66401649CED8009F0BD9 /* UIColor+JPColor.h */,
+				FD7D66411649CED8009F0BD9 /* UIColor+JPColor.m */,
+			);
+			name = JPColor;
+			sourceTree = "<group>";
+		};
 		FD7D65F81649CB6F009F0BD9 = {
 			isa = PBXGroup;
 			children = (
@@ -88,10 +110,8 @@
 			children = (
 				FD7D66361649CD53009F0BD9 /* AppDelegate.h */,
 				FD7D66371649CD53009F0BD9 /* AppDelegate.m */,
-				FD7D66391649CD68009F0BD9 /* MainViewController.h */,
-				FD7D663A1649CD68009F0BD9 /* MainViewController.m */,
-				FD7D66401649CED8009F0BD9 /* UIColor+JPColor.h */,
-				FD7D66411649CED8009F0BD9 /* UIColor+JPColor.m */,
+				FD3399221653589E00A05FF3 /* Example */,
+				FD339924165358D300A05FF3 /* JPColor */,
 			);
 			name = "Source Code";
 			path = JapaneseColor;
@@ -175,7 +195,6 @@
 				FD7D66311649CCC5009F0BD9 /* Default.png in Resources */,
 				FD7D66321649CCC5009F0BD9 /* Default@2x.png in Resources */,
 				FD7D66331649CCC5009F0BD9 /* InfoPlist.strings in Resources */,
-				FD7D66341649CCC5009F0BD9 /* JapaneseColor-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +209,7 @@
 				FD7D66381649CD53009F0BD9 /* AppDelegate.m in Sources */,
 				FD7D663B1649CD68009F0BD9 /* MainViewController.m in Sources */,
 				FD7D66421649CED8009F0BD9 /* UIColor+JPColor.m in Sources */,
+				FD6306B716528A6100BBA986 /* NextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +320,7 @@
 				FD7D66231649CB6F009F0BD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
